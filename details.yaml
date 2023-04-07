@@ -1,0 +1,67 @@
+branch_name: ansible-localhost-2023-04-07T091435.858503+0530
+branches:
+- main
+- main
+- main
+changed: true
+failed: false
+msg: 'Successfully retrieved repository: git@github.com:rohitthakur2590/scm_testing.git'
+name: scm_testing
+output:
+-   command: git -C /tmp/tmp4mvi8aop clone --depth=1 --progress --no-single-branch
+        git@github.com:rohitthakur2590/scm_testing.git
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - Cloning into 'scm_testing'...
+    - 'remote: Enumerating objects: 5, done.        '
+    - 'remote: Counting objects:  20% (1/5)        '
+    - 'remote: Counting objects:  40% (2/5)        '
+    - 'remote: Counting objects:  60% (3/5)        '
+    - 'remote: Counting objects:  80% (4/5)        '
+    - 'remote: Counting objects: 100% (5/5)        '
+    - 'remote: Counting objects: 100% (5/5), done.        '
+    - 'remote: Compressing objects:  20% (1/5)        '
+    - 'remote: Compressing objects:  40% (2/5)        '
+    - 'remote: Compressing objects:  60% (3/5)        '
+    - 'remote: Compressing objects:  80% (4/5)        '
+    - 'remote: Compressing objects: 100% (5/5)        '
+    - 'remote: Compressing objects: 100% (5/5), done.        '
+    - 'remote: Total 5 (delta 0), reused 4 (delta 0), pack-reused 0        '
+    - 'Receiving objects:  20% (1/5)'
+    - 'Receiving objects:  40% (2/5)'
+    - 'Receiving objects:  60% (3/5)'
+    - 'Receiving objects:  80% (4/5)'
+    - 'Receiving objects: 100% (5/5)'
+    - 'Receiving objects: 100% (5/5), 13.58 KiB | 13.58 MiB/s, done.'
+    stdout_lines: []
+-   command: git -C /tmp/tmp4mvi8aop/scm_testing branch -a
+    env: ''
+    return_code: 0
+    stderr_lines: []
+    stdout_lines:
+    - '* main'
+    - '  remotes/origin/HEAD -> origin/main'
+    - '  remotes/origin/main'
+-   command: git -C /tmp/tmp4mvi8aop/scm_testing checkout -t -b ansible-localhost-2023-04-07T091435.858503+0530
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - Switched to a new branch 'ansible-localhost-2023-04-07T091435.858503+0530'
+    stdout_lines:
+    - branch 'ansible-localhost-2023-04-07T091435.858503+0530' set up to track 'main'.
+-   command: git -C /tmp/tmp4mvi8aop/scm_testing remote add upstream git@github.com:ansible-network/scm_testing.git
+    env: ''
+    return_code: 0
+    stderr_lines: []
+    stdout_lines: []
+-   command: git -C /tmp/tmp4mvi8aop/scm_testing pull upstream main --rebase
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - From github.com:ansible-network/scm_testing
+    - ' * branch            main       -> FETCH_HEAD'
+    - ' * [new branch]      main       -> upstream/main'
+    stdout_lines:
+    - Already up to date.
+path: /tmp/tmp4mvi8aop/scm_testing
