@@ -1,0 +1,80 @@
+branch_name: ansible-localhost-2023-04-19T154237.569703+0530
+branches:
+- main
+- main
+- ansible-localhost-2023-04-07T091435.858503+0530
+- main
+changed: true
+failed: false
+msg: 'Successfully retrieved repository: git@github.com:rohitthakur2590/scm_testing.git'
+name: scm_testing
+output:
+-   command: git -C /tmp/tmppnncm7eh clone --depth=1 --progress --no-single-branch
+        git@github.com:rohitthakur2590/scm_testing.git
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - Cloning into 'scm_testing'...
+    - 'remote: Enumerating objects: 8, done.        '
+    - 'remote: Counting objects:  12% (1/8)        '
+    - 'remote: Counting objects:  25% (2/8)        '
+    - 'remote: Counting objects:  37% (3/8)        '
+    - 'remote: Counting objects:  50% (4/8)        '
+    - 'remote: Counting objects:  62% (5/8)        '
+    - 'remote: Counting objects:  75% (6/8)        '
+    - 'remote: Counting objects:  87% (7/8)        '
+    - 'remote: Counting objects: 100% (8/8)        '
+    - 'remote: Counting objects: 100% (8/8), done.        '
+    - 'remote: Compressing objects:  14% (1/7)        '
+    - 'remote: Compressing objects:  28% (2/7)        '
+    - 'remote: Compressing objects:  42% (3/7)        '
+    - 'remote: Compressing objects:  57% (4/7)        '
+    - 'remote: Compressing objects:  71% (5/7)        '
+    - 'remote: Compressing objects:  85% (6/7)        '
+    - 'remote: Compressing objects: 100% (7/7)        '
+    - 'remote: Compressing objects: 100% (7/7), done.        '
+    - 'remote: Total 8 (delta 1), reused 7 (delta 1), pack-reused 0        '
+    - 'Receiving objects:  12% (1/8)'
+    - 'Receiving objects:  25% (2/8)'
+    - 'Receiving objects:  37% (3/8)'
+    - 'Receiving objects:  50% (4/8)'
+    - 'Receiving objects:  62% (5/8)'
+    - 'Receiving objects:  75% (6/8)'
+    - 'Receiving objects:  87% (7/8)'
+    - 'Receiving objects: 100% (8/8)'
+    - 'Receiving objects: 100% (8/8), 14.50 KiB | 14.50 MiB/s, done.'
+    - 'Resolving deltas:   0% (0/1)'
+    - 'Resolving deltas: 100% (1/1)'
+    - 'Resolving deltas: 100% (1/1), done.'
+    stdout_lines: []
+-   command: git -C /tmp/tmppnncm7eh/scm_testing branch -a
+    env: ''
+    return_code: 0
+    stderr_lines: []
+    stdout_lines:
+    - '* main'
+    - '  remotes/origin/HEAD -> origin/main'
+    - '  remotes/origin/ansible-localhost-2023-04-07T091435.858503+0530'
+    - '  remotes/origin/main'
+-   command: git -C /tmp/tmppnncm7eh/scm_testing checkout -t -b ansible-localhost-2023-04-19T154237.569703+0530
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - Switched to a new branch 'ansible-localhost-2023-04-19T154237.569703+0530'
+    stdout_lines:
+    - branch 'ansible-localhost-2023-04-19T154237.569703+0530' set up to track 'main'.
+-   command: git -C /tmp/tmppnncm7eh/scm_testing remote add upstream git@github.com:ansible-network/scm_testing.git
+    env: ''
+    return_code: 0
+    stderr_lines: []
+    stdout_lines: []
+-   command: git -C /tmp/tmppnncm7eh/scm_testing pull upstream main --rebase
+    env: ''
+    return_code: 0
+    stderr_lines:
+    - From github.com:ansible-network/scm_testing
+    - ' * branch            main       -> FETCH_HEAD'
+    - ' * [new branch]      main       -> upstream/main'
+    stdout_lines:
+    - Already up to date.
+path: /tmp/tmppnncm7eh/scm_testing
